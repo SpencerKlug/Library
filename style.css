@@ -1,0 +1,103 @@
+
+body {
+    background-color: #212227;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 900;
+}
+
+/* 
+#8693AB Cool Gry
+#BDD4E7 Beau Blue (meh)
+#212227 Raisin Black
+#637074 Cadet
+#AAB9CF Light Steel Blue
+*/
+
+.bookAddition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+.addBook {
+    border-radius: 2px;
+    color: black;
+}
+
+.submit {
+    display: flex;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 50px;
+    justify-content: center;
+    background-color: white;
+}
+
+#bAdd {
+    width: 30px;
+    height: 30px;
+}
+
+.submit:hover{
+    cursor: pointer;
+}
+
+.submit:active {
+    position: relative;
+    top: 1px;
+}
+
+#addbook {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #BF3100;
+    border: 0.25px solid #637074;
+    color: #DAB785;
+    filter: drop-shadow(2px 4px 6px #637074);
+    border-radius: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+.show {
+}
+
+#addbook h1 {
+    text-align: center;
+}
+
+#addbook * {
+    margin: 0 5px 3px 5px;
+}
+
+#addbook #submit:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.librairyBooks {
+    display: flex;
+    background-color: white;
+    min-height: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+}

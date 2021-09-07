@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <link href="style.css" rel="stylesheet">
+	<title>Librairy</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Personal Library</h1>
+    </header>
+    <div class="container">
+        <div class="addBook">
+            <div class="submit">
+                <img id="bAdd" src='add_black_24dp.svg' alt="book addition"></img>
+            </div>
+        </div>
+        <div class="librairyBooks">
+        </div>
+        <div id="form" class="form hidden">
+            <form action id="addbook" class=>
+                <h1>Add a New Book</h1>
+                <label for="title">Title</label>
+                <input minlength="4" type="text" id="title" autocomplete="off">
+                <label for="author">Author</label>
+                <input minlength="4" type="text" id="author" autocomplete="off">
+                <label for="pagecount">Page Count</label>
+                <input minlength="4" type="text" id="pagecount" autocomplete="off">
+                <h3>Have you read it?</h3>
+                <div class="radio" id="radio"> 
+                    <span id="radio1">
+                        <label for="yes">Yes</label>
+                        <input required type="radio" name="selection" id="yes">
+                    </span>
+                    <span id="radio2">
+                        <label for="no">No</label>
+                        <input required type="radio" name="selection" id="no">
+                    </span>
+                </div>
+                <input type="submit" id="submit" value="Add"> 
+            </form>
+        </div>
+    </div>
+</body>
+<script src ="script.js"></script>
+</html>
