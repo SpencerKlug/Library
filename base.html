@@ -15,6 +15,23 @@
             </div>
         </div>
         <div class="librairyBooks">
+            <div class="bookTitle">
+                <span class="title">
+                    <p>Title: The Hobbit</p>
+                </span>
+                <span class="author">
+                    <p>Author: J.R.R. Tolkien</p>
+                </span>
+                <span class="pages">
+                    <p>Pages: 295</p>
+                </span>
+                <span class="Status">
+                    <p>Status: Read</p>
+                </span>
+                <span class="delete">
+                    <input type="submit" class="deleteButton" value="Remove Book">
+                </span>
+            </div>
         </div>
         <div id="form" class="form hidden">
             <form action id="addbook" class=>
@@ -25,7 +42,7 @@
                 <input minlength="4" type="text" id="author" autocomplete="off">
                 <label for="pagecount">Page Count</label>
                 <input minlength="4" type="text" id="pagecount" autocomplete="off">
-                <h3>Have you read it?</h3>
+                <label>Have you read it?</label>
                 <div class="radio" id="radio"> 
                     <span id="radio1">
                         <label for="yes">Yes</label>
@@ -36,7 +53,7 @@
                         <input required type="radio" name="selection" id="no">
                     </span>
                 </div>
-                <input type="submit" id="submit" value="Add"> 
+                <input type="submit" id="submit" value="Add Book"> 
             </form>
         </div>
     </div>

@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Montserrat:wght@500&display=swap');
 
 body {
     background-color: #212227;
     color: white;
+    font-family: 'Libre Caslon Text', serif;
 }
+
+h1 { 
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 .header {
     display: flex;
@@ -56,28 +64,50 @@ body {
 
 #addbook {
     position: absolute;
-    left: 30%;
+    left: 35%;
     top: 30%;
     display: flex;
     flex-direction: column;
-    width: 400px;
-    background-color: #BF3100;
+    width: 350px;
+    background-color: #637074;
     border: 0.25px solid #637074;
-    color: #DAB785;
+    color: white;
     filter: drop-shadow(2px 4px 6px #637074);
     border-radius: 10px;
+    padding: 15px;
+    border: solid #212227;
+    font-size: 1.5rem;
+}
+
+input {
+    border: none;
+    background-color: #637074;
+    border-bottom: 1px solid #212227;
+    overflow: hidden;
+    outline: none;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+#submit{
+    background-color: #212227;
+    color: white;
+    font-weight: 700;   
 }
 
 .hidden{
     display: none;
 }
 
-.show {
-}
-
 #addbook h1 {
     text-align: center;
+    font-size: 20px;
 }
+
+#addbook label {
+    font-size: 16px;
+}
+
+
 
 #addbook * {
     margin: 0 5px 3px 5px;
@@ -87,17 +117,55 @@ body {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
 .librairyBooks {
     display: flex;
+    flex-wrap: wrap;
     background-color: white;
     min-height: 600px;
     margin-top: 20px;
     border-radius: 10px;
+}
+
+.op {
+    opacity: 80%;
+} 
+
+/*     opacity: 60%;
+ */
+
+.bookTitle {
+    background-color: #637074;
+    filter: drop-shadow(2px 4px 6px #637074);
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+    padding: 1em 2em;
+    margin: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.delete {
+    width: 100%;
+    background-color: #212227;
+    filter: drop-shadow(2px 4px 6px #637074);
+    font-weight: 700;
+}
+
+.deleteButton {
+    color: white;
+    background-color:  #212227;
+}
+
+.deleteButton:hover {
+    cursor: pointer;
+}
+
+.deleteButton:active{
+    position: relative;
+    top: 1px;
+}
+
+.bookTitle:hover {
+    transform: translateY(-2px);
 }
