@@ -3,6 +3,9 @@ const bookForm = document.querySelector('.form')
 const formSubmit = document.querySelector('#submit')
 const lb = document.querySelector('.librairyBooks')
 
+//my Library Array
+let myLibrary = [];
+
 //Add book + mark
 const addBookForm = document.querySelector('.submit')
 
@@ -28,6 +31,7 @@ formSubmit.addEventListener('click',function(){
 
 addBookForm.addEventListener('click',function(){
     console.log('Test');
+    clear();
     bookForm.classList.remove('hidden');
     lb.classList.add('op');
     bookForm.classList.add('show');
@@ -40,12 +44,14 @@ formSubmit.addEventListener('click',function(){
     const bookStatus = document.querySelector('input[name="selection"]:checked').value;
     const bookId = Date.now();
 
-    const b = new book(bookTitle,bookAuthor,bookPages,bookStatus,bookId);
+    const myBook = new book(bookTitle,bookAuthor,bookPages,bookStatus,bookId);
     console.log(bookId);
-    console.log(b.info());
-    bookAddition(b.title,b.author,b.pages,b.read,b.id)
+    console.log(myBook.info());
+    myLibrary.push(myBook);
+    bookAddition(myBook.title,myBook.author,myBook.pages,myBook.read,myBook.id);
 })
 
+//adding html logic
 function bookAddition(bookTitle,bookAuthor,bookPages,bookStatus,bookId) {
     //creating base div
     const cardBase = document.createElement('div');
@@ -97,6 +103,23 @@ function bookAddition(bookTitle,bookAuthor,bookPages,bookStatus,bookId) {
     deteleI.value = 'Remove Book';
     cardDelete.appendChild(deteleI);
 }
+
+//clearing form 
+function clear(){
+    const formTitle = document.querySelector('#title');
+    const formAuthor = document.querySelector('#author');
+    const formPage = document.querySelector('#pagecount')
+    formTitle.value = '';
+    formAuthor.value = '';
+    formPage.value = '';
+}
+
+lb.addEventListener('click',function(e){
+    if(e.target.classList == 'deleteButton'){
+        const bt = e.target.parentElement.parentElement;
+        lb.removeChild(bt);
+    }
+})
 
 const theHobbit = new book("The Hobbit","J.R.R. Tolkien","295","not read yet")
 
